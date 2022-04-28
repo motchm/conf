@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#RUN AS root USER!
+#RUN WITH PRIVILEGES
 
 echo "clearing SWAP..." && \
 swapoff -a && \
