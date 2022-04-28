@@ -1,0 +1,15 @@
+
+
+{
+ 
+    "description": "Allow outgoing connections for dns, http/https, ssh, ntp, ssh and ping",
+ 
+    "filter": [
+    	{
+            "in": "_fw",
+            "out": "lan",
+            "service": [ "dns", "http", "https", "ssh", "ntp", "ping" ],
+            "action": "accept"
+	}
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Default awall policy to protect Cloud server",
+ 
+  "variable": { "lan_if": "eth0" },
+ 
+  "zone": {
+    "lan": { "iface": "$lan_if" }
+  },
+ 
+  "policy": [
+    { "in": "lan", "action": "drop" },
+    { "action": "reject" }
+  ]
+ 
+}

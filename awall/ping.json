@@ -1,0 +1,13 @@
+{
+ 
+    "description": "Allow ping-pong",
+ 
+    "filter": [
+        {
+	      "in": "lan",
+	      "service": "ping",
+	      "action": "accept",
+ 	      "flow-limit": { "count": 10, "interval": 6 }
+        }
+    ]
+}
