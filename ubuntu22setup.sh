@@ -2,9 +2,15 @@
 # from minimal install
 ## RUN AS ROOT
 apt update && apt full-upgrade -y
+
+#install useful stuff
 apt install snapd psmisc neofetch htop ufw nano bash-completion docker.io -y
+
+#set up livepatch
 apt install ubuntu-advantage-tools
 ua attach <TOKEN>
+
+#configure
 echo 'motch ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 systemctl enable --now docker
 usermod -aG docker <USER>
