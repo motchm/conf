@@ -11,7 +11,7 @@ apt install ubuntu-advantage-tools
 ua attach <TOKEN>
 
 #passwordless sudo
-echo 'motch ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+echo '<USER> ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 #set up docker
 systemctl enable --now docker
