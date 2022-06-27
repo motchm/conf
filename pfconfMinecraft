@@ -1,0 +1,7 @@
+tcp_services = "{ ssh, domain, www, auth, https, 25565 }"
+udp_services = "{ domain }"
+block all
+pass out proto tcp to any port $tcp_services keep state
+pass proto udp to any port $udp_services keep state
+pass in proto tcp to port ssh
+pass in proto tcp to port 25565
